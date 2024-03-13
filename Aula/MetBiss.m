@@ -1,4 +1,4 @@
-function [y1,y2,ymedio] = MetBiss(a,b,n)
+function [ymedio,erro] = MetBiss(a,b,n)
 
     for i = 1 : n
 
@@ -18,10 +18,8 @@ function [y1,y2,ymedio] = MetBiss(a,b,n)
         end
 
     end
-
-    y1 = a;
-    y2 = b;
     ymedio = medio;
+    erro = (b-a)/2;
     
 
 end
