@@ -1,6 +1,0 @@
-function [sol,n] = MetFix(x,tolerancia)
-%METFIX Summary of this function goes here
-%   Detailed explanation goes here
-while erro <
-end
-
