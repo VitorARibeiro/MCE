@@ -12,12 +12,12 @@ end
 
 while(Erro >= tol)
     Medio = (a+b)/2;
+     Erro = (b-a)/2;
     if(Funcao(a) * Funcao(Medio) <= 0)
         b = Medio;
     else
         a = Medio;
     end
-    Erro = (b-a)/2;
     fprintf("It %i, Medio = %f , Erro = %f \n",It,Medio,Erro);
     It = It +1 ;
 end

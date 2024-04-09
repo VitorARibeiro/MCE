@@ -8,7 +8,7 @@ title("G(x)");
 grid on;
 
 subplot(1,2,2)
-plot(x,DGx(x)); %% tem de ser menor que 1
+plot(x,DGx(x),"*"); %% tem de ser menor que 1
 title("G´(x)");
 grid on;
 

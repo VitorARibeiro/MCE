@@ -8,17 +8,18 @@ end
 for i = 1:it
    
     Medio = (a+b)/2;
+    Erro = (b-a)/2;
     if(Funcao(a) * Funcao(Medio) <= 0)
         b = Medio;
     else
         a = Medio;
     end
-    fprintf("It %i, Medio = %f , Erro = %f \n",i,Medio,(b-a)/2);
+    fprintf("It %i, Medio = %f , Erro = %f \n",i,Medio,Erro);
  
 end
 
 Resultado = Medio;
-Erro = (b-a)/2;
+
 
 end
 

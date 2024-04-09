@@ -1,4 +1,4 @@
-x = linspace(0,1);
+x = linspace(-1,0);
 
 figure(1);
 
