@@ -26,7 +26,7 @@ it = 1;
 
 while(erro >= tol)
 xD = M*xA + N;
-erro = norm(xD - xA); %norma 2 ,p 1 2 inf
+erro = norm(xD - xA); %norma 2 ,p 1 2 inf 
 
 fprintf("It - %i erro = %f \n",it,erro);
 it = it +1;
