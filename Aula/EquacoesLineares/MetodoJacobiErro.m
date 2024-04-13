@@ -11,22 +11,22 @@ L = -tril(A,-1);
 U = -triu(A,1);
 D = diag(diag(A));
 
-M = (D-L)\U ; N = (D-L)\B;
+M = D\(L+U) ; N = D\B;
 
 ro = max(abs(eig(M)));
 
 if(ro >= 1)
-    fprintf("RO > 1 \n");
+    fprintf("RO >= 1 \n");
     return;
 end
 
-xA = zeros(size(A,1),1);
+xA = zeros(size(A,1),1); %Ponto inicial a zero
 erro = tol +1;
 it = 1;
 
 while(erro >= tol)
 xD = M*xA + N;
-erro = norm(xD - xA); %norma 2 ,p 1 2 inf
+erro = norm(xD - xA)/norm(xD); %norma 2 ,p 1 2 inf
 
 fprintf("It - %i erro = %f \n",it,erro);
 it = it +1;
