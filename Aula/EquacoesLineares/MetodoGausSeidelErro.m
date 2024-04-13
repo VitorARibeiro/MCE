@@ -1,4 +1,4 @@
-function [xD,it] = MetodoJacobiErro(A,B,tol)
+function [xD,it] = MetodoGausSeidelErro(A,B,tol)
 %METODO JACOBI Summary of this function goes here
 %   Detailed explanation goes here
 
