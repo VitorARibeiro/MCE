@@ -2,7 +2,7 @@ function [xD,it] = MetodoJacobiErro(A,B,tol)
 %METODO JACOBI Summary of this function goes here
 %   Detailed explanation goes here
 
-if (abs(det(A)) <= 0.0001) 
+if (abs(det(A)) <= 0.0001) %%mostra que existe apenas 1 sol
     fprintf("Determinante proximo de 0 \n")
         return ;
 end
@@ -15,7 +15,7 @@ M = D\(L+U) ; N = D\B;
 
 ro = max(abs(eig(M)));
 
-if(ro >= 1)
+if(ro >= 1) %%mostra que podemos usar qualquer x0
     fprintf("RO >= 1 \n");
     return;
 end
@@ -26,7 +26,7 @@ it = 1;
 
 while(erro >= tol)
 xD = M*xA + N;
-erro = norm(xD - xA)/norm(xD); %norma 2 ,p 1 2 inf
+erro = norm((xD - xA) , inf); %norma 2 ,p 1 2 inf
 
 fprintf("It - %i erro = %f \n",it,erro);
 it = it +1;
