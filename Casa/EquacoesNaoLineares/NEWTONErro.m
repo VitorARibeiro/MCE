@@ -11,5 +11,6 @@ while( erro >= tol)
     x0 = X;
     
 end
+fprintf("numero de itecaoes = %i e erro = %f",it,erro);
 end
 
