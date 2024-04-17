@@ -20,12 +20,12 @@ if(ro >= 1)
     return;
 end
 
-xA = zeros(size(A,1),1);
+xA = zeros(size(A,1),1); %% Inicio
 
 it = 0;
 
 while(it < n)
-xD = M*xA + N;
+xD = M*xA + N
 erro = norm(xD - xA , inf); %norma 2 ,p 1 2 inf 
 it = it +1;
 fprintf("It - %i erro = %f \n",it,erro);
