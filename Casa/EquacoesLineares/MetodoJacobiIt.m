@@ -21,11 +21,13 @@ if(ro >= 1)
 end
 
 xA = zeros(size(A,1),1); %Ponto inicial a zero
+xA(1,1) = 1;
+xA(2,1) = 0;
 
 it = 0;
 
 while(it < n)
-xD = M*xA + N;
+xD = M*xA + N
 erro = norm(xD - xA)/norm(xD); %norma 2 ,p 1 2 inf
 
 it = it +1;

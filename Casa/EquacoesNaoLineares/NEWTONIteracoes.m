@@ -3,7 +3,7 @@ function [X, erro] = NEWTONIteracoes(x0 , it)
 %   Detailed explanation goes here
 n = 0;
 while(n < it)
-    X = x0 - Jacobiano(x0) \ Func(x0);
+    X = x0 - Jacobiano(x0) \ Func(x0)
     n = n+1;
     erro = norm(X - x0);
     x0 = X ;
