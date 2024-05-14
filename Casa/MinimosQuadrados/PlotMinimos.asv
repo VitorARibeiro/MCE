@@ -1,0 +1,32 @@
+ x = [1 1.5 2.5 3 3.5 4 5.5 6];
+y = [3.12 2.75 2.14 1.89 1.67 1.47 1.01 .89];
+
+plot(x,y,"rx","MarkerSize",8)
+xlabel("x")
+ylabel("y")
+hold on;
+
+%A=[sum(x.^2),sum(x);sum(x),length(x)];
+%B = [sum(y.*x) ; sum(y)];
+%sol = A\B
+
+sol = polyfit(x,y,1)
+
+
+reta = @(x) exp(sol(1)) * x + sol(2);
+
+
+%reta = @(x) sol(1)*x + sol(2);
+
+%reta = @(x) sol(1)*x.^2 +sol(2)*x + sol(3);
+
+erro=sqrt(sum((y - reta(x)).^2))
+
+
+plot(x,reta(x),"b","MarkerSize",8)
+
+
+
+
+
+

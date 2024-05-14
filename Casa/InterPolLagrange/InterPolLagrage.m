@@ -24,9 +24,6 @@ for i = 1 : n
     P = P + Y(i) * l(i);
 
 end
-
-
-
  
 end
 

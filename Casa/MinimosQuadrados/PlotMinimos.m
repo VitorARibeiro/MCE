@@ -1,18 +1,26 @@
-x=[88.6,93.3,84.3,80.6,75.2,69.7,82,69.4,83.3,79.6,82.6,80.6,83.5,76.3];
-y=[20,19.8,18.4,17.1,15.5,14.7,17.1,15.4,16.3,15,17.2,16,17,14.4];
+x = [1 1.5 2.5 3 3.5 4 5.5 6];
+y = [3.12 2.75 2.14 1.89 1.67 1.47 1.01 0.89];
 
 plot(x,y,"rx","MarkerSize",8)
-xlabel("Intensidade do canto dos grilos")
-ylabel("Temperatura")
+xlabel("x")
+ylabel("y")
 hold on;
 
-A=[sum(x.^2),sum(x);sum(x),length(x)];
-B = [sum(y.*x) ; sum(y)];
-sol = A\B
-erro=sqrt(sum((y-( sol(1)*x + sol(2)   )).^2))
-% erro=sqrt(sum((y-(sol(1)*x.^2+sol(2)*x +sol(3)  )).^2))
+%Y = log(y);
 
-reta = @(x) sol(1)*x + sol(2);
+sol = polyfit(x,y,2)
+
+a = sol(1);
+b = sol(2);
+c = sol(3);
+
+%reta = @(x) a*exp(b*x);
+
+%reta = @(x) a*x + b;
+reta = @(x) a*x.^2 + b*x + c;
+
+erro = sqrt(sum((y - reta(x)) .^2)   )
+
 plot(x,reta(x),"b","MarkerSize",8)
 
 
