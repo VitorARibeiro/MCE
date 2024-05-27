@@ -1,0 +1,28 @@
+function [It,Resultado] = RegraDosTrapeziosErro(a,b,Tol)
+%REGRADOSTRAPEZIOSERRO Summary of this function goes here
+%   Detailed explanation goes here
+
+xCompleto = a:h:b;
+
+%a + b
+somaAB = Func(a) + Func(b);
+n = 1;
+
+while erro > Tol
+    h = (b-a) / n ;
+
+    x = a+h:h:b-h;
+
+    somatorio = somatorio + 2*func;
+    n = n + 1;
+
+end
+
+
+Area = (h/2) * ( Func(a) + 2*sum(Func(x)) + Func(b) )
+
+M = max( abs(FuncDD(xCompleto)));
+Erro = (h^2 / 12) * (b-a) * M; 
+Resultado = Area + Erro;
+end
+

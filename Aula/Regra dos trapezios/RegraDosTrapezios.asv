@@ -1,8 +1,0 @@
-function [Resultado,Erro] = RegraDosTrapezios(a,b,n)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
-h = (b-a) / n ;
-x = linspace(a+h,b-h,h);
-Area = h/2 * ( Func(a) + 2* sum(Func(x) + Func(b) )
-end
-

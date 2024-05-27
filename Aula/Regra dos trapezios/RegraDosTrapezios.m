@@ -7,7 +7,7 @@ x = a+h:h:b-h;
 
 xCompleto = a:h:b;
 
-Area = (h/2) * ( Func(a) + 2*sum(Func(x)) + Func(b) )
+Area = (h/2) * ( Func(a) + 2*sum(Func(x)) + Func(b) );
 
 M = max( abs(FuncDD(xCompleto)));
 Erro = (h^2 / 12) * (b-a) * M; 
