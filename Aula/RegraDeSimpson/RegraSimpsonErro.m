@@ -37,7 +37,7 @@ for k = 1:length(x)/2
 sumPar = sumPar + f(2*k);
 end
 
-Area = (h/4) * ( Func(a) + 2*sumImpar + 4*sumPar + Func(b) )
+Area = (h/3) * ( Func(a) + 2*sumImpar + 4*sumPar + Func(b) )
 
 Resultado = Area + Erro;
 end
