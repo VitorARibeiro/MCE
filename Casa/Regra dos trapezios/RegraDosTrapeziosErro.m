@@ -18,9 +18,9 @@ while Erro > Tol
 
 
 end
-
+Erro
 x = a+h:h:b-h;
-Area = (h/2) * ( Func(a) + 2*sum(Func(x)) + Func(b) );
+Area = (h/2) * ( Func(a) + 2*sum(Func(x)) + Func(b) )
 
 Resultado = Area + Erro;
 end
